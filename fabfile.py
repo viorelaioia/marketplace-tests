@@ -11,7 +11,6 @@ def push_results():
 
     with lcd(project_dir):
         local('python cron.py > status.json')
-        local('git checkout gh-pages')
         local('git add status.json')
         with settings(warn_only=True):
             local('git commit -m "status update at %s"' %
