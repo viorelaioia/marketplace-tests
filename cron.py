@@ -49,4 +49,7 @@ def get_jenkins(jobs):
 
 
 if __name__ == '__main__':
-    print json.dumps(get_jenkins(JENKINS), indent=2)
+    result = json.dumps(get_jenkins(JENKINS), indent=2)
+    status_file = open('status.json', 'w')
+    status_file.write(result)
+    status_file.close()

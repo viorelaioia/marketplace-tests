@@ -10,7 +10,7 @@ def push_results():
     project_dir = os.path.dirname(os.path.abspath(__file__))
 
     with lcd(project_dir):
-        local('python cron.py > status.json')
+        local('python cron.py')
         local('git add status.json')
         with settings(warn_only=True):
             local('git commit -m "status update at %s"' %
