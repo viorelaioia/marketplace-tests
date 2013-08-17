@@ -5,8 +5,27 @@ import requests
 from datetime import datetime
 
 JENKINS = [
+    # Payments Dev
+    'b2g.unagi.mozril.gaia.v1-train.ui.marketplace_payment',
+
+    # Marketplace Dev on B2G
+    'b2g.unagi.mozril.gaia.v1-train.ui.marketplace',
+
+    # Dev Jobs
     'marketplace.dev',
-    'marketplace.prod'
+    'marketplace.dev.saucelabs',
+    'marketplace.dev.developer_hub',
+    'marketplace.dev.developer_hub.saucelabs',
+    'marketplace.dev.mobile.saucelabs',
+
+    # Prod Jobs
+    'marketplace.prod',
+    'marketplace.prod.saucelabs',
+    'marketplace.prod.mobile.saucelabs',
+
+    # Stage Jobs
+    'marketplace.stage.saucelabs',
+    'marketplace.stage.mobile.saucelabs',
 ]
 
 
@@ -30,4 +49,4 @@ def get_jenkins(jobs):
 
 
 if __name__ == '__main__':
-    print json.dumps(get_jenkins(JENKINS))
+    print json.dumps(get_jenkins(JENKINS), indent=2)
