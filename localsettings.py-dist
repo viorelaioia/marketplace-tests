@@ -1,0 +1,27 @@
+# Jenkins server in the format HOST:PORT (without protocol)
+JENKINS_SERVER = ''
+
+# Jenkins jobs to track
+JENKINS_JOBS = [
+    # Payments Dev
+    'b2g.unagi.mozril.gaia.v1-train.ui.marketplace_payment',
+
+    # Marketplace Dev on B2G
+    'b2g.unagi.mozril.gaia.v1-train.ui.marketplace',
+
+    # Dev Jobs
+    'marketplace.dev',
+    'marketplace.dev.saucelabs',
+    'marketplace.dev.developer_hub',
+    'marketplace.dev.developer_hub.saucelabs',
+    'marketplace.dev.mobile.saucelabs',
+
+    # Prod Jobs
+    'marketplace.prod',
+    'marketplace.prod.saucelabs',
+    'marketplace.prod.mobile.saucelabs',
+
+    # Stage Jobs
+    'marketplace.stage.saucelabs',
+    'marketplace.stage.mobile.saucelabs',
+]
